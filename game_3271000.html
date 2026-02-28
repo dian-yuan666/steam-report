@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>世嘉足球俱乐部冠军 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/e737cf907e139416df33a9c193fe510e35754539/header_schinese.jpg?t=1772104508" alt="世嘉足球俱乐部冠军">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #10</div>
+    <div class="hero-title">世嘉足球俱乐部冠军</div>
+    <div class="hero-sub">Football Manager ™助力驱动，使用FIFPRO™球员数据，让玩家可在J联赛、K联赛等各大赛事中纵横驰骋！化身主教练兼俱乐部经营者，带领球队从本地英雄成长为世界豪门。进行预注册并在第一时</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">从本地联赛走向世界顶级联赛！带领队伍走上世界之巅！全新经营模拟体验，奋战欧洲顶级联赛。从本土走向世界之巅！深受玩家喜爱的足球俱乐部经营模拟游戏《创造球会》——系列新作献给全球玩家！世嘉倾情呈现——30年来经久不衰、充满激情与策略的代表性足球游戏！《创造球会》由Football Manager ™助力驱动，使用FIFPRO™球员数据，让玩家可在J联赛、K联赛等各大赛事中纵横驰骋！化身主教练兼俱乐部经营者，带领球队从本地英雄成长为世界豪门。无论身处世界何处，通过跨平台与跨设备联机功能，可随时随地通过移动平台、PC平台以及主机平台免费畅玩本作。■ 真实球员登场世界真实知名球星于游戏中登场！除了欧洲各大联盟，日本J联盟与韩国K联盟的大量真实选手都收录于游戏中，游戏将有超过5000名以上真实选手任您收集！■作为球会掌旗者的经营体验作为球会经营者，决定球会未来的经营战略，建设主场，成为前所未有的大球会，在市场中挖角与交易选手，打造完美阵容，并且发掘有潜力的年轻球员，培育成未来的明星选手吧！■足球传奇的成功之路体验围绕明星选手打造只属于自己的梦幻队伍，考验你的足球IQ，战术与选手配置，运用智能豪夺胜利！独特选手剧情系统，考验你的领导能力，在这里你能够随心所欲地打造球会，从默默无名开始，踏上挑战之路，挑战世界强权！■与监督们展开热烈对战透过PVP多人游戏模式与其他监督对战，目标是成为世界最强！出战杯赛与国际大赛，赢下光荣胜利，在排行榜上刻下自己的名字，成为永垂不朽的传奇吧！#创造球会#SFCC</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/dbeaa2da7dae022f10bf0cb8b5d87f1496dfcad0/ss_dbeaa2da7dae022f10bf0cb8b5d87f1496dfcad0.1920x1080.jpg?t=1772104508" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/9c5e67f08b173c4978ed8ff829e45ba462dc7955/ss_9c5e67f08b173c4978ed8ff829e45ba462dc7955.1920x1080.jpg?t=1772104508" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/5dd4a655da34f437359f7a0be27513f385fb8f7f/ss_5dd4a655da34f437359f7a0be27513f385fb8f7f.1920x1080.jpg?t=1772104508" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/ba69c1f1d093811b7af6a0ddbf093d5cf6d60919/ss_ba69c1f1d093811b7af6a0ddbf093d5cf6d60919.1920x1080.jpg?t=1772104508" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/579e543237cdc9b5369f6e53dbb02a8d4af8664c/ss_579e543237cdc9b5369f6e53dbb02a8d4af8664c.1920x1080.jpg?t=1772104508" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3271000/9108405a0af4042519147274272ffc1b6d602a89/ss_9108405a0af4042519147274272ffc1b6d602a89.1920x1080.jpg?t=1772104508" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">玩家对战</span><span class="ctag">线上玩家对战</span><span class="ctag">跨平台多人</span><span class="ctag">应用内购买</span><span class="ctag">部分支持控制器</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">免费</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/3271000/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#e05a5a">32%</div>
+          <div class="score-label" style="color:#e05a5a">多半差评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:32%;background:#e05a5a"></div></div>
+          <div class="review-count">共 595 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">模拟, 体育, 免费开玩</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">SEGA</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">SEGA</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2026 年 1 月 21 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

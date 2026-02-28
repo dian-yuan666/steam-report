@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VRChat 虚拟社交 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/header.jpg?t=1762366454" alt="VRChat 虚拟社交">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #20</div>
+    <div class="hero-title">VRChat 虚拟社交</div>
+    <div class="hero-sub">Join our growing community as you explore, play, and help craft the future of social VR. Create worl</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">Imagine a space filled with limitless possibilities. Spend your afternoon dogfighting in fighter jets, before winding down in a treehouse that exists floating in a nebula. Make a new best friend while exploring a haunted mansion, right before playing a hand of cards with a robot, alien, and eight-foot tall wolf.In VRChat, there are hundreds of thousands of worlds, millions of avatars – all created by the users. No matter what you’re into, there’s a space in VRChat for you. And if there isn’t, we’ll give you the tools to make your dream a reality.While not required to join in on the fun, VRChat was built to take advantage of VR headsets in many unique ways. That means avatars that flow with your movement, and systems that work alongside various hardware platforms to provide full-body tracki</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_1577335ddadd96c338c16a747758290b4214eb85.1920x1080.jpg?t=1762366454" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_31f674ab2a2cdf3d72ff7e8155100f4539a65a72.1920x1080.jpg?t=1762366454" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_869211a61f76ff08db693092b43678278c396249.1920x1080.jpg?t=1762366454" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_9f66a537db246bbf8fa0aa9c6681a37f65307ac2.1920x1080.jpg?t=1762366454" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_b0c252d8f3c07478ec4001c995f4f6c75afb16a1.1920x1080.jpg?t=1762366454" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_38db30a76b354606cf8583565179e69c1054b23c.1920x1080.jpg?t=1762366454" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">多人</span><span class="ctag">大型多人在线</span><span class="ctag">玩家对战</span><span class="ctag">线上玩家对战</span><span class="ctag">合作</span><span class="ctag">在线合作</span><span class="ctag">跨平台多人</span><span class="ctag">完全支持控制器</span><span class="ctag">定位控制器支持</span><span class="ctag">已支持 VR</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">免费</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/438100/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#68b4ff">71%</div>
+          <div class="score-label" style="color:#68b4ff">多半好评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:71%;background:#68b4ff"></div></div>
+          <div class="review-count">共 171,057 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">冒险, 休闲, 大型多人在线, 模拟, 体育, 免费开玩, 抢先体验</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">VRChat Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">VRChat Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2017 年 2 月 1 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

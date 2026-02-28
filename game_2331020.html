@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>传奇贝尔塞利亚 重制版 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/a7c716c18f65440089086efffde3e599d0b96ca4/header_schinese.jpg?t=1772147146" alt="传奇贝尔塞利亚 重制版">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #7</div>
+    <div class="hero-title">传奇贝尔塞利亚 重制版</div>
+    <div class="hero-sub">〝绯夜传奇〞变得更加易于游玩后再次问世！向夺走一切的救世主复仇――救世主的登场让王国逐渐恢复秩序，一名怀有血海深仇的女性在王国中驱驰。</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">数字豪华版【数字豪华版内容】■游戏本体■战斗BGM组合包■数字美术书＆原声带■超促进成长！红药草组※〝数字美术书＆原声带〞跟游戏本体是不同的应用程序。※内容有可能于日后另行发布。关于游戏〝绯夜传奇〞变得更加易于游玩后再次问世！向夺走一切的救世主复仇――救世主的登场让王国逐渐恢复秩序，一名怀有血海深仇的女性在王国中驱驰。在壮大的世界观中，主角薇尔贝特与她身边富有个性的角色交织出颇具深度的故事。〝坚持自我原则而活的RPG〞再次启动――◆一个关于〝感情与法理〞的故事是要顺从感情横冲直撞，或是遵守依据法理的秩序？以任何人皆有的感性与理性冲突为主题，描写心怀强烈感情勇往直前的薇尔贝特，与贯彻法理坚守世界秩序之人的对立。◆充满爽快感的战斗系统本作的战斗系统，可配合自身游戏风格〝自由自在〞设置术技，施展形形色色的连击。此外，透过夺取敌人名为〝心魂〞的图示，更可创造超越连击上限的组合技。任何人皆能轻松享受充满爽快感的战斗乐趣。◆维持原有感动的同时，变得更加易于游玩增加各种方便的新功能，如显示目的地的图标，以及关闭原野或迷宫内遇敌的功能。系列作必备的〝GRADE商店〞也于游戏初期便已开放，让玩家获得更顺畅的游玩体验。◆收录众多初版下载内容游戏本体收录众多初版下载内容。（※部分下载内容并未包含）从能化身为系列作熟悉角色的服装到用处多多的道具，丰富内容帮助玩家进一步体验游戏乐趣。※本商品是以2016年发售的〝绯夜传奇〞为基础开发的产品。（部分样式会稍有不同。）※基本上为1人游玩，战斗时最多可4人游玩。</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/d432c0f201c215da96a3a293df067d2f061aae38/ss_d432c0f201c215da96a3a293df067d2f061aae38.1920x1080.jpg?t=1772147146" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/0d8602d9db14c6c19113d8697e24f20d289933e6/ss_0d8602d9db14c6c19113d8697e24f20d289933e6.1920x1080.jpg?t=1772147146" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/46b873b8353e85ab0be0d2bf5ceffd30f576f8fa/ss_46b873b8353e85ab0be0d2bf5ceffd30f576f8fa.1920x1080.jpg?t=1772147146" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/9eca3c3c6df7bee9367b9ca7fe5391737eff7fb4/ss_9eca3c3c6df7bee9367b9ca7fe5391737eff7fb4.1920x1080.jpg?t=1772147146" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/2ea8573cf2cd839a47c820b51ac10aa50cfecacd/ss_2ea8573cf2cd839a47c820b51ac10aa50cfecacd.1920x1080.jpg?t=1772147146" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2331020/bb010103c0c318e67587bcac1df0de4c1e20b986/ss_bb010103c0c318e67587bcac1df0de4c1e20b986.1920x1080.jpg?t=1772147146" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">合作</span><span class="ctag">同屏/分屏合作</span><span class="ctag">同屏/分屏</span><span class="ctag">Steam 成就</span><span class="ctag">完全支持控制器</span><span class="ctag">Steam 云</span><span class="ctag">家庭共享</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">¥ 6,930</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/2331020/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#a0a8c0">58%</div>
+          <div class="score-label" style="color:#a0a8c0">褒贬不一</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:58%;background:#a0a8c0"></div></div>
+          <div class="review-count">共 39 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">动作, 角色扮演</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">D.A.G Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">Bandai Namco Entertainment Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2026 年 2 月 26 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

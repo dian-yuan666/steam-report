@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影之诗：超越世界 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/bab5a90e2765d340ca3ba8553e1b0ee679176dda/header_schinese.jpg?t=1772083189" alt="影之诗：超越世界">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #4</div>
+    <div class="hero-title">影之诗：超越世界</div>
+    <div class="hero-sub">由Cygames制作的卡牌游戏新作《Shadowverse: Worlds Beyond（影之诗：超凡世界）》正式登场！ 游戏新增“超进化”和“乐园功能”等新元素和新内容， 这将成为一款迈进新次元的电</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">由Cygames制作的卡牌游戏新作《Shadowverse: Worlds Beyond（影之诗：超凡世界）》正式登场！游戏新增“超进化”和“乐园功能”等新元素和新内容，这将成为一款迈进新次元的电子卡牌游戏！无论是《影之诗》的老玩家，还是新玩家，都可以在进化后的影之诗中获得全新体验！■卡牌对战影之诗规则简单，策略无限！卡牌的搭配和对战策略将左右游戏的胜败！来体验由精美插画构成的激烈对战吧！■“进化”和新系统“超进化”可使随从（召唤至战场上进行战斗的卡牌）在对战中进化，从而提升其能力。随从进化时发动的能力可以大大影响战局！在本作中，灵活运用“进化”和 “超进化”两种进化系统，扩展策略范围，使对战更加激动人心！■每日免费卡包每天都可以抽取免费卡包！“卡牌图鉴”上线，可体验收集卡牌的满足感！不仅能享受对战，还可以享受收集的乐趣！■职业玩家可从7种职业中选择适合自己的职业，构筑自己原创的牌组，根据策略和喜好自定义牌组，享受卡牌对战的乐趣吧！■剧情全程语音的崭新故事！（语音可选日语和英语）围绕个性迥异的七位主人公，波澜壮阔的故事将徐徐展开！■新功能“影之诗乐园”这里是供玩家之间交流的新天地，与同伴携手变得更强吧！</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/defcec1913c0db52900aaff5204b49933b7ed872/ss_defcec1913c0db52900aaff5204b49933b7ed872.1920x1080.jpg?t=1772083189" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/6422d563dbf69e03912191b119446874602bc9e1/ss_6422d563dbf69e03912191b119446874602bc9e1.1920x1080.jpg?t=1772083189" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/c508a75597fef415cebec683e8fc08f51c47b6f0/ss_c508a75597fef415cebec683e8fc08f51c47b6f0.1920x1080.jpg?t=1772083189" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/33e2a60959e6f2b6eca9a47a1fefc060263efa05/ss_33e2a60959e6f2b6eca9a47a1fefc060263efa05.1920x1080.jpg?t=1772083189" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/c5e605b727e3d562467fe00c8c2311bcae859efa/ss_c5e605b727e3d562467fe00c8c2311bcae859efa.1920x1080.jpg?t=1772083189" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2584990/0f839ec72be59d27614576acf61e8cd89c0d5686/ss_0f839ec72be59d27614576acf61e8cd89c0d5686.1920x1080.jpg?t=1772083189" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">玩家对战</span><span class="ctag">线上玩家对战</span><span class="ctag">跨平台多人</span><span class="ctag">Steam 成就</span><span class="ctag">应用内购买</span><span class="ctag">可调整文字大小</span><span class="ctag">视角舒适度</span><span class="ctag">自定义音量控制</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">免费</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/2584990/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#e05a5a">37%</div>
+          <div class="score-label" style="color:#e05a5a">多半差评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:37%;background:#e05a5a"></div></div>
+          <div class="review-count">共 6,304 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">休闲, 角色扮演, 策略, 免费开玩</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">Cygames, Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">Cygames, Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2025 年 6 月 14 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>博德之门 3 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/48a2fcbda8565bb45025e98fd8ebde8a7203f6a0/header.jpg?t=1765505948" alt="博德之门 3">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #18</div>
+    <div class="hero-title">博德之门 3</div>
+    <div class="hero-sub">《博德之门3》是一款以“龙与地下城”世界为背景的、强调故事与队伍冒险体验的角色扮演游戏。你的每一个选择，都会编织出一段关于同伴与背叛、生存与牺牲，以及至上力量诱惑的故事。</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">召集你的队伍，重返被遗忘的国度。这里有友情与背叛，牺牲与求生，还有那股让人难以抗拒的——至上力量的诱惑。 神秘的力量正在你体内苏醒，而这一切都来源于夺心魔种在你大脑里的寄生虫。反抗吧，将黑暗的力量转为己用；你也可以任由腐化蔓延，亲手把自己塑造成终极邪恶。 由《神界：原罪2》原班人马倾力打造，这款基于《龙与地下城》规则的次世代 RPG 巨作，等你来战。你可以从《龙与地下城玩家手册》中的12个职业与11个种族中进行选择，或者直接扮演一位拥有量身打造背景故事的“起源英雄”。如果你渴望更深层的挣扎，那就化身“邪念”——一个完全可定制的起源英雄，拥有独一无二的机制和黑暗故事线，去与你内心的腐化欲望纠缠。无论你选择成为谁，你都可以在“被遗忘的国度”及更广阔的世界中冒险、搜刮、战斗，甚至谈一场轰轰烈烈的恋爱。召集你的队伍，既可以独自上路，也支持最多四人在线联机。被劫持，被感染，陷入迷失。你正在变成一个怪物，但随着你体内腐化力量的增长，你的力量也在增强。这力量或许能助你幸存下来，但在接受它的同时，你必将付出某种代价。然而，超越任何异能，你与队友之间建立的信任纽带可能会成为你最大的力量。在恶魔、诸神以及种种不可名状的异界力量交织的冲突中，你们将一起决定“被遗忘的国度”的最终命运。利用全新的Divinity4.0引擎打造，《博德之门3》将为你提供前所未有的自由度，让在这个充满角色、危险和欺诈的鲜活世界中探索、尝试、互动，并获取即时的反馈。宏大的电影级叙事将拉近你与角色的距离。从幽影诅咒笼罩的森林，到幽暗地域的魔法洞穴，再到博德之门熙攘的街头——你的行动定义了这段冒险，而你的选择将定义你的传奇。你，终将被世人铭记。“被遗忘的国度”是一个宏大、细节繁多、充满丰富多样性的世界，到处都有等待被你发现的秘密——你可以潜行、通过蘸取借力、推击敌人、攀爬高地、极限跳跃。这些行动会贯穿你的整个旅途，从大地深处</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_c73bc54415178c07fef85f54ee26621728c77504.1920x1080.jpg?t=1765505948" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_73d93bea842b93914d966622104dcb8c0f42972b.1920x1080.jpg?t=1765505948" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_cf936d31061b58e98e0c646aee00e6030c410cda.1920x1080.jpg?t=1765505948" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_b6a6ee6e046426d08ceea7a4506a1b5f44181543.1920x1080.jpg?t=1765505948" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_6b8faba0f6831a406ce015648958da9612d14dbb.1920x1080.jpg?t=1765505948" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_8fc5eba770b4a1639b31666908bdd2bbc1aa2ae4.1920x1080.jpg?t=1765505948" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">合作</span><span class="ctag">在线合作</span><span class="ctag">局域网合作</span><span class="ctag">跨平台多人</span><span class="ctag">Steam 成就</span><span class="ctag">完全支持控制器</span><span class="ctag">Steam 集换式卡牌</span><span class="ctag">可调整文字大小</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">¥ 6,374</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/1086940/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#4caf82">96%</div>
+          <div class="score-label" style="color:#4caf82">压倒性好评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:96%;background:#4caf82"></div></div>
+          <div class="review-count">共 435,509 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">冒险, 角色扮演, 策略</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">Larian Studios</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">Larian Studios</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2023 年 8 月 3 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows / Mac</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

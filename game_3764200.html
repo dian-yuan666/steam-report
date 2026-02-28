@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>生化危机：安魂曲 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/ce5437442768e38eb575f205ab9397d0264017b0/header.jpg?t=1772168710" alt="生化危机：安魂曲">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #1</div>
+    <div class="hero-title">生化危机：安魂曲</div>
+    <div class="hero-sub">予生者恐惧。给尸者安魂。 《Resident Evil Requiem》标志着“Resident Evil”系列和生存恐怖游戏步入新纪元。“安魂曲”将会撼动玩家的精神深处。</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">Resident Evil Requiem Deluxe Edition豪华版是包含《Resident Evil Requiem》游戏本篇和“豪华包”在内的划算套装。【豪华包内容】・格蕾丝服装：蒂米特雷斯库・格蕾丝服装：黑色电影・里昂服装：RE4・里昂服装：末日・里昂服装：黑色电影・滤镜：末日・滤镜：黑色电影・包括S&amp;S M232 武器外观：末日在内，共4款武器外观・浣熊先生挂件・DSO徽章挂件・音乐及音效：浣熊市经典・文件：来自1998年的信*此组合内的商品也可以独立购买。请注意有否重复购买。关于游戏予生者恐惧。给尸者安魂。《Resident Evil Requiem》是开创生存恐怖新纪元的系列最新作。与FBI分析员格蕾丝一同体验令人战栗的恐惧，并与资深特工里昂一同感受战胜死亡的畅快感。双角色的游戏体验，以及围绕二人纵横交错的剧情，绝对能直击玩家的灵魂。浣熊市重返那座灾难与绝望之城。本作的舞台是位于美国中西部的浣熊市，曾是全球制药巨头“保护伞”公司的总部所在地。1998年，面对突如其来的丧尸爆发，政府为迅速平息事态，实施了“灭菌作战”，但这一事实被长期掩盖。格蕾丝 · 阿什克罗夫特FBI分析员，拥有卓越的洞察力与推理能力。母亲的离世给她带来了深重的打击，从此变得沉默寡言，将所有精力投入工作。为了调查废弃旅馆中神秘的死亡事件，她决心独自前往案发现场。里昂 · S · 肯尼迪浣熊市事件的幸存者之一。凭借强烈的正义感与过人的身体素质，在屡次感染爆发中力挽狂澜，成长为反生物恐怖组织 DSO 的资深特工。如今他正着力于调查发生在美国中西部的一系列离奇死亡事件。游玩延续系列经典的生存恐怖体验——战斗、探索、解谜与资源管理应有尽有。玩家可自由切换第一视角与第三视角，以最适合自己的方式直面恐惧。*另有包含本商品的套装包。请注意避免重复购买。</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/08af4e9398b8e45152bfbedce3bc24d22e2c0990/ss_08af4e9398b8e45152bfbedce3bc24d22e2c0990.1920x1080.jpg?t=1772168710" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/4921eb5fb45f6b7a3b62195e47c6d7b4175935a8/ss_4921eb5fb45f6b7a3b62195e47c6d7b4175935a8.1920x1080.jpg?t=1772168710" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/e7b791b703759aebe774b813eb29a364008552b8/ss_e7b791b703759aebe774b813eb29a364008552b8.1920x1080.jpg?t=1772168710" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/bbe5c4e0ba4fc551d9389cf2411c2cefe413af1d/ss_bbe5c4e0ba4fc551d9389cf2411c2cefe413af1d.1920x1080.jpg?t=1772168710" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/9422ad111dfd5fe1df34352946c6aa715c23f0f6/ss_9422ad111dfd5fe1df34352946c6aa715c23f0f6.1920x1080.jpg?t=1772168710" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/a5ad021e191c2f3cfcb4fcdd7abe193c887b3500/ss_a5ad021e191c2f3cfcb4fcdd7abe193c887b3500.1920x1080.jpg?t=1772168710" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">Steam 成就</span><span class="ctag">完全支持控制器</span><span class="ctag">Steam 集换式卡牌</span><span class="ctag">支持字幕</span><span class="ctag">Steam 云</span><span class="ctag">可用 HDR</span><span class="ctag">家庭共享</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">¥ 8,990</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/3764200/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#68c97e">94%</div>
+          <div class="score-label" style="color:#68c97e">特别好评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:94%;background:#68c97e"></div></div>
+          <div class="review-count">共 5,637 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">动作, 冒险</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">CAPCOM Co., Ltd.</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">CAPCOM Co., Ltd.</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2026 年 2 月 26 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

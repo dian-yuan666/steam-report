@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>仁王 3 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/a21264e9fd476dcb2901c2432b598107d024c5a8/header.jpg?t=1772090941" alt="仁王 3">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #12</div>
+    <div class="hero-title">仁王 3</div>
+    <div class="hero-sub">黑暗战国动作RPG“仁王”系列第三部力作。本作舞台是兼具自由度与紧张感的开放地图，还可自由切换“武士”与“忍者”两种战斗风格挑战各路强敌妖怪。</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">数字豪华版组合内容内含以下内容：·《仁王3》游戏本体·《仁王3》季票·《仁王3》季票特典“千千古吊饰”（饰品）【数字豪华版特典】·“狱妖武器”组合（共14种）·“木灵吊饰”（饰品）※季票包含两部追加DLC，DLC内容涵盖全新剧情、敌人、妖怪、头目角色及装备等下载内容。※需推进游戏本体至特定进度，方可游玩季票中的各项内容。※特典内容有可能在日后提供免费或付费下载，敬请理解。※追加内容及预定发布日有可能在没有预告的情况下变更。※季票特典将于游戏发售日同步解锁。DLC第一弹预计于2026年9月30日前发布，DLC第二弹预计于2027年2月28日前发布。详情请查看官方网站。※本作亦有《仁王3》普通版，购买前请确认所需的版本内容。※本商品包含“游戏本体”与“季票”，请避免重复购买。仁王3　体验版踏破地狱，尽展将军气魄此为黑暗战国动作RPG“仁王”系列的第三作《仁王３》的体验版。您可在此体验游戏开篇内容，体验版存档可继承至正式版。※《仁王３ 体验版》仅限在线游玩，若未联网将无法游玩游戏。※本体验版可能在未另行通知的情况下结束提供。详情请参阅官方网站。在2026年2月15日前通关体验版，即可获赠能在正式版使用的装备“丹青双蛇头盔”。※通关特典“丹青双蛇头盔”与PlayStation®5的α体验版通关特典相同。※启动正式版后，将自动继承体验版存档（体验版存档需保存在同一台主机内）。※若主机内已存在任何正式版游戏存档，则无法游玩体验版。※在正式版中击败蛇骨婆后，可获得与体验版通关特典相同的“丹青双蛇头盔”。2月15日（周日）前必定获得，2月16日（周一）后改为稀有掉落。※若要将本体验版的存档继承至正式版，体验版存档需保存在游玩正式版的同一设备上，并且使用相同的Steam账户。“高画质”与“超高画质”系统要求关于游戏踏破地狱，尽展将军气魄黑暗战国动作RPG“仁王”系列，万众期待的第三部正式登场</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/c65877619b70c51d6be030c20b5c37bcfaf2e248/ss_c65877619b70c51d6be030c20b5c37bcfaf2e248.1920x1080.jpg?t=1772090941" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/8c9333bf3f28194cb8113af455ecaf1aa45a0050/ss_8c9333bf3f28194cb8113af455ecaf1aa45a0050.1920x1080.jpg?t=1772090941" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/5d02a1bcff9cc74ef4551c9afce91c78881539a1/ss_5d02a1bcff9cc74ef4551c9afce91c78881539a1.1920x1080.jpg?t=1772090941" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/fe1a9485c46e95c8a899e8cfc645136f303b4fda/ss_fe1a9485c46e95c8a899e8cfc645136f303b4fda.1920x1080.jpg?t=1772090941" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/9068ef1b3d231d0808ac8ec50ae864483e4374d9/ss_9068ef1b3d231d0808ac8ec50ae864483e4374d9.1920x1080.jpg?t=1772090941" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3681010/271b11ccc100773992d9e0a1d06a1d3848eaf1c8/ss_271b11ccc100773992d9e0a1d06a1d3848eaf1c8.1920x1080.jpg?t=1772090941" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">合作</span><span class="ctag">在线合作</span><span class="ctag">Steam 成就</span><span class="ctag">Steam 集换式卡牌</span><span class="ctag">可调整文字大小</span><span class="ctag">视角舒适度</span><span class="ctag">可选颜色</span><span class="ctag">自定义音量控制</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">¥ 9,680</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/3681010/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#68c97e">82%</div>
+          <div class="score-label" style="color:#68c97e">特别好评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:82%;background:#68c97e"></div></div>
+          <div class="review-count">共 3,564 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">动作, 角色扮演</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">KOEI TECMO GAMES CO., LTD.</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">KOEI TECMO GAMES CO., LTD.</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2026 年 2 月 5 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

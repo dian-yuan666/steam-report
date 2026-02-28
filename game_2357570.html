@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>守望先锋 2 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/2044d29c64bf646c162052110e66c922fef47e7a/header_alt_assets_19.jpg?t=1771358111" alt="守望先锋 2">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #17</div>
+    <div class="hero-title">守望先锋 2</div>
+    <div class="hero-sub">《守望先锋®》，一个值得为之奋战的未来！ 《守望先锋®》是一款长期运营并不断演化的免费团队动作游戏，战场设定在光明的未来，每场对战都是一次5v5或6v6的终极乱斗。</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">《守望先锋》是一款长期运营并不断演化的免费团队英雄射击游戏，战场设定在光明的未来，拥有全新英雄和地图、新颖的游戏方式以及独特的个性化物品，每场对战都是一次5v5或6v6的终极乱斗！无论你是喜欢领军冲锋、伏击敌人还是援助盟友，由超过40位英雄组成的《守望先锋》强大阵容中总有适合你的英雄。与好友组队，一同冲入超过25张源自现实世界的未来风格地图，纵横多种独特的游戏模式。  黑爪之治——第1赛季：征服之路下一个盛大的剧情篇章即将展开2026年的守望世界即将迎来剧变。在这个持续一年的故事线中，守望先锋和黑爪即将正面交锋，为争夺世界的未来而战，双方还将得到五名全新英雄的助阵。就让我们一起走进精彩的故事，塑造未来的情节吧！值此十周年到来之际，第1赛季将为《守望先锋》掀开下一段宏大故事的第一个章节，让大家通过自己的选择，以自己的方式为未来而战！游戏会一次性将五名新英雄加入到阵容中，为大家带来新的玩法风格、新的变化机制和新的面容与声音。“飞天猫”、安燃、“金驭”、埃姆雷和瑞稀将会及时登场，迎接“黑爪之治：征服之路”，为持续一年的精彩故事拉开帷幕。激烈的冲突将登上舞台的中心，而你的贡献将会决定事态会如何展开。在这场泾渭分明的阵营冲突中，你必须在守望先锋和黑爪之间选择你的立场，战斗的结果将会对这个世界和你的前路造成深远的影响。除了新的剧情，竞技比赛也将迎来全新调整，核心玩法不断进化，彻底刷新整个游戏的体验。这个新的赛季将会为《守望先锋》的叙事方式和游戏玩法设下全新的基调。</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/b17b61def60cb8b3f693cb3a6b80152f7963b04e/ss_b17b61def60cb8b3f693cb3a6b80152f7963b04e.1920x1080.jpg?t=1771358111" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/78e99c6da684734a84fcd69aff1baa7b5fe996f6/ss_78e99c6da684734a84fcd69aff1baa7b5fe996f6.1920x1080.jpg?t=1771358111" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/ec6de0364a1014e97ab05a7cad9f187be0bd494e/ss_ec6de0364a1014e97ab05a7cad9f187be0bd494e.1920x1080.jpg?t=1771358111" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/fced44634f014d9f240c20191993d17608845a98/ss_fced44634f014d9f240c20191993d17608845a98.1920x1080.jpg?t=1771358111" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5bf1bef7045a75815f6dfc36f016c7cdf5e1fafd/ss_5bf1bef7045a75815f6dfc36f016c7cdf5e1fafd.1920x1080.jpg?t=1771358111" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/532fc3e5be0c84c86607e08a0e14f27b4300af76/ss_532fc3e5be0c84c86607e08a0e14f27b4300af76.1920x1080.jpg?t=1771358111" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">多人</span><span class="ctag">玩家对战</span><span class="ctag">线上玩家对战</span><span class="ctag">合作</span><span class="ctag">在线合作</span><span class="ctag">跨平台多人</span><span class="ctag">Steam 成就</span><span class="ctag">完全支持控制器</span><span class="ctag">应用内购买</span><span class="ctag">可调整文字大小</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">免费</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/2357570/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#e05a5a">37%</div>
+          <div class="score-label" style="color:#e05a5a">多半差评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:37%;background:#e05a5a"></div></div>
+          <div class="review-count">共 145,560 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">动作, 免费开玩</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">Blizzard Entertainment, Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">Blizzard Entertainment, Inc.</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2023 年 8 月 10 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

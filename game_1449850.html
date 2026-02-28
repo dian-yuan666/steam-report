@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>游戏王：决斗链接 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/fc10d38783260f29b3f86f19afcfe80d9868ee0a/header.jpg?t=1769733849" alt="游戏王：决斗链接">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #14</div>
+    <div class="hero-title">游戏王：决斗链接</div>
+    <div class="hero-sub">史上最强的数位卡牌遊戏！</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">「遊戏王」成为一款全面的数位卡牌遊戏！历经 25 多年不断进化的战略性卡牌遊戏决定版！史上最强的决斗等着你！你会关注这场决斗吗！ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー【什么是「Yu-Gi-Oh! Master Duel」】可以在线上遊玩人气的「遊戏王OCG」卡牌的数位遊戏，用华丽的画面、迷人的音效和轻快的节奏让决斗充满活力！与来自世界各地的决斗者一起畅快地玩「遊戏王」！◇ 首先，决斗只有实战！让我们从你得到的第一副卡牌开始决斗吧！提供完整的教学，即使是很久没有玩过的人，或者是新手也可以放心玩！进行遊戏的同时并收集大量卡牌！◇ 举办各种规则的官方大赛和活动！丰富你的决斗生活！有各种各样的活动和比赛，可以让全世界众多玩家都能乐在其中！合计收录超过10,000 种卡牌，享受各种决斗乐趣！以成为常规赛No1为目标！◇卡牌插图中包含的故事剧情！搭载单人模式，即使是一个人也能尽性！深入了解卡牌相关的各种故事剧情，提高决斗段位！不仅推荐给想要更深入体验遊戏王世界的玩家，也推荐给第一次玩或者久未接触的玩家！◇多种功能支持决斗！可与手机遊戏「Yu-Gi-Oh！Neuron」连携！参考世界各地的DUELIST的牌组，制作原创牌组! 可以使用试抽功能在决斗开始时检查您的卡牌！提高牌组的准确性！[关于遊戏王]「遊戏王」是高桥和希先生创作的知名漫画，由集英社自1996年起于「周刊少年Jump」上连载。Konami Digital Entertainment发行的集换式卡牌遊戏 (TCG) 和家庭用主机遊戏以原作漫画「遊戏王」系列的动画为基础（在东京电视台等中播出），该遊戏风靡全世界。【推荐给这样的玩家！ 】正在玩「Yu-Gi-Oh! OCG」的玩家正在玩「Yu-Gi-Oh! Duel Links」的玩家想玩人气对战遊戏的玩家ーーーーーーーーーーーーーーーーーーーー</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/ss_f4e2257edc1cb8093f1f0b40d7daf96211405f90.1920x1080.jpg?t=1769733849" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/ss_6501d1b0e2dc14a5e1031d5e02456d9b72912a0b.1920x1080.jpg?t=1769733849" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/ss_e568cc7bd1896039e2383f48488a262d873fbf20.1920x1080.jpg?t=1769733849" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/ss_7de501a6f2c485aef22eed9c3b79e761c26c4d1a.1920x1080.jpg?t=1769733849" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/ss_4974fad247b8d5e1b3fa2320ccd8c04cdd7fcacc.1920x1080.jpg?t=1769733849" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1449850/ss_175c4b63e376b95d5028833ef1a98facb1ebdeec.1920x1080.jpg?t=1769733849" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">玩家对战</span><span class="ctag">线上玩家对战</span><span class="ctag">跨平台多人</span><span class="ctag">Steam 成就</span><span class="ctag">Steam 集换式卡牌</span><span class="ctag">应用内购买</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">免费</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/1449850/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#68b4ff">73%</div>
+          <div class="score-label" style="color:#68b4ff">多半好评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:73%;background:#68b4ff"></div></div>
+          <div class="review-count">共 47,133 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">模拟, 策略, 免费开玩</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">KONAMI</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">KONAMI</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2022 年 1 月 18 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>

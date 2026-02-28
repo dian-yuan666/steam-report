@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>地心守护者 · 游戏详情</title>
+<style>
+:root{--bg:#0d0f14;--s:#161922;--s2:#1e2230;--bd:#2a2f45;--ac:#6c63ff;--ac2:#00d4aa;--tx:#e8eaf6;--mt:#8892b0;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--bg);color:var(--tx);font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;}
+a{color:var(--ac2);text-decoration:none;}
+a:hover{text-decoration:underline;}
+.topbar{background:var(--s);border-bottom:1px solid var(--bd);padding:14px 32px;display:flex;align-items:center;gap:16px;}
+.back-btn{background:rgba(108,99,255,.18);border:1px solid rgba(108,99,255,.4);color:#a89eff;padding:7px 18px;border-radius:8px;font-size:13px;cursor:pointer;transition:.2s;text-decoration:none;display:inline-block;}
+.back-btn:hover{background:rgba(108,99,255,.35);text-decoration:none;}
+.topbar-title{font-size:15px;color:var(--mt);}
+.hero{position:relative;height:360px;overflow:hidden;}
+.hero img.bg{width:100%;height:100%;object-fit:cover;filter:brightness(.4);}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,#0d0f14 0%,transparent 60%);}
+.hero-content{position:absolute;bottom:32px;left:40px;right:40px;}
+.rank-badge{display:inline-block;background:var(--ac);color:#fff;font-size:12px;font-weight:700;padding:3px 12px;border-radius:20px;margin-bottom:10px;letter-spacing:1px;}
+.hero-title{font-size:clamp(22px,4vw,40px);font-weight:800;line-height:1.2;margin-bottom:6px;}
+.hero-sub{color:var(--mt);font-size:14px;}
+.container{max-width:1100px;margin:0 auto;padding:40px 24px;}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;}
+@media(max-width:768px){.grid{grid-template-columns:1fr;}}
+.section-title{font-size:15px;font-weight:700;color:var(--ac2);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.card{background:var(--s);border:1px solid var(--bd);border-radius:12px;padding:22px;margin-bottom:18px;}
+.desc{line-height:1.85;color:#c8cfe8;font-size:14px;}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:4px;}
+.shots img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:6px;cursor:pointer;transition:.2s;border:1px solid var(--bd);}
+.shots img:hover{border-color:var(--ac);transform:scale(1.03);}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid var(--bd);font-size:13px;}
+.info-row:last-child{border-bottom:none;}
+.info-label{color:var(--mt);}
+.info-val{color:var(--tx);font-weight:500;text-align:right;max-width:60%;}
+.price-big{font-size:28px;font-weight:800;color:var(--ac2);margin-bottom:4px;}
+.price-sub{font-size:12px;color:var(--mt);}
+.score-wrap{margin:16px 0;}
+.score-num{font-size:36px;font-weight:800;}
+.score-label{font-size:13px;color:var(--mt);margin-top:2px;}
+.score-bar-wrap{height:6px;background:var(--bd);border-radius:3px;margin-top:10px;overflow:hidden;}
+.score-bar{height:100%;border-radius:3px;}
+.review-count{font-size:12px;color:var(--mt);margin-top:6px;}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;}
+.ctag{font-size:12px;background:rgba(255,255,255,.06);color:var(--mt);padding:3px 10px;border-radius:4px;}
+.steam-btn{display:block;text-align:center;background:linear-gradient(135deg,#1a9fff,#1567c0);color:#fff;font-weight:700;font-size:14px;padding:13px;border-radius:10px;margin-top:16px;transition:.2s;text-decoration:none;}
+.steam-btn:hover{background:linear-gradient(135deg,#2ab0ff,#1a7ad4);text-decoration:none;}
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;}
+.lightbox.active{display:flex;}
+.lightbox img{max-width:90vw;max-height:88vh;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:28px;font-size:32px;color:#fff;cursor:pointer;line-height:1;}
+footer{text-align:center;padding:32px;color:var(--mt);font-size:13px;border-top:1px solid var(--bd);margin-top:20px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back-btn" href="gaming_report_2026Feb.html">← 返回主页</a>
+  <span class="topbar-title">Steam 热销 Top 20 · 游戏详情</span>
+</div>
+
+<div class="hero">
+  <img class="bg" src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/e5ac710b6bdb6711dbff6ed4eb0c1f93d068b97a/header_alt_assets_15_schinese.jpg?t=1772014723" alt="地心守护者">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="rank-badge">热销榜 #19</div>
+    <div class="hero-title">地心守护者</div>
+    <div class="hero-sub">这是一款可供 1 至 8 名玩家畅玩的挖矿类沙盒冒险游戏，你将探索一座充满各种生物、遗物与资源的无穷无尽的洞窟。不断挖掘、建造、战斗、打造、耕作，最终揭晓古代核心的奥秘。</div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="grid">
+
+    <!-- 左栏 -->
+    <div>
+      <div class="card">
+        <div class="section-title">游戏简介</div>
+        <p class="desc">作为一名探险家，在一个久已被人所忘却、充满了不为人知的秘密的洞窟里醒来。 在这款屡获殊荣、可供 1 至 8 名玩家畅玩的挖矿类沙盒冒险游戏中，你将用你自己的选择塑造出一段史诗般的旅程。 搜集遗物与资源，制作先进工具，建设据点，在一个动态发展的世界里尽情探索它那等待着被人挖掘的点点滴滴。升级各种技能，击败传奇泰坦，揭开笼罩在核心之力上的神秘面纱。 培育花园，在神秘水域中捕鱼，掌握琳琅满目的菜谱，饲养和照顾动物，与穴居者们不期而遇，挖掘出一个属于你自己的独特世界，展开一场令人心醉神迷的地下冒险。挖掘资源在地下世界开辟出一条属于你自己的道路。 深入探索，搜集珍贵资源，让深藏地底的宝石重见天日。 制作镐头、鱼竿、铲子乃至陷阱、炸弹、迫击炮等工具，帮自己生存下去。 用威力无穷的毁灭射线等先进工具升级你的武器库和装备，用自动化机械简化挖掘、冶炼和储藏等各项工作的流程。 升级各种技能，解锁强力武器，征服这深不可测的深渊。探索上古世界探索一个个多姿多彩的生态区，领略它们那独特的生态系统和湮灭已久的背景故事。 从黏土洞窟那生机勃勃的墙壁，到莹光边境的水晶洞窟，逐步揭开穴居者们的秘密，进一步了解这个神秘莫测的世界。 建造船只，在沉没之海扬帆起航，疾速穿越起源荒漠，邂逅上古文明的遗迹。建造、制作、发挥创意利用各种不同的材料和自定义选项，打造出一个与众不同的据点。 从冒险家的终极巢穴到温馨惬意的地底小屋，按照你自己的心意去塑造这个地下世界。 自定义角色外观，从众多强力护甲和各具特色的服装中进行选择，以适应不同场合的需要。迎击泰坦直面传奇泰坦，从它们身上了解这个被遗忘已久的世界的秘密。 利用各种各样的怪物和小头目磨练你的战斗技能，用天赋点来提升你的能力等级，精心构思战斗策略，从而征服地下世界里的这些庞然大物。 寻觅稀有而强力的战利品，让它们助你一臂之力，为核心提供能量。与好友们一起探索既可独自享受冒</p>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏截图</div>
+        <div class="shots"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/632a42b91e005b2d2daf99fee946732c95a9737c/ss_632a42b91e005b2d2daf99fee946732c95a9737c.1920x1080.jpg?t=1772014723" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/bca1feb5ec1bf64543f80c74effdcaed4216033c/ss_bca1feb5ec1bf64543f80c74effdcaed4216033c.1920x1080.jpg?t=1772014723" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/804585b7772d3ae5c7d56fc80401469d5bf6fd27/ss_804585b7772d3ae5c7d56fc80401469d5bf6fd27.1920x1080.jpg?t=1772014723" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/ss_1e162c49418038f8042c92810fe3c753449e204b.1920x1080.jpg?t=1772014723" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/ss_2a6cdb26200932593b4edd5ab3d1cc2da5bc15ee.1920x1080.jpg?t=1772014723" onclick="openImg(this.src)" alt="截图"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/ss_8f3fd22bc5c385450d36309755323ca18efda4be.1920x1080.jpg?t=1772014723" onclick="openImg(this.src)" alt="截图"></div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏特性</div>
+        <div class="ctags"><span class="ctag">单人</span><span class="ctag">多人</span><span class="ctag">合作</span><span class="ctag">在线合作</span><span class="ctag">完全支持控制器</span><span class="ctag">Steam 云</span><span class="ctag">家庭共享</span></div>
+      </div>
+    </div>
+
+    <!-- 右栏 -->
+    <div>
+      <div class="card">
+        <div class="price-big">¥ 1,380</div>
+        <div class="price-sub">Steam 官方定价</div>
+        <a class="steam-btn" href="https://store.steampowered.com/app/1621690/" target="_blank">在 Steam 上查看 →</a>
+      </div>
+
+      <div class="card">
+        <div class="section-title">玩家评价</div>
+        <div class="score-wrap">
+          <div class="score-num" style="color:#68c97e">94%</div>
+          <div class="score-label" style="color:#68c97e">特别好评</div>
+          <div class="score-bar-wrap"><div class="score-bar" style="width:94%;background:#68c97e"></div></div>
+          <div class="review-count">共 22,196 条评价</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-title">游戏信息</div>
+        <div class="info-row"><span class="info-label">类型</span><span class="info-val">动作, 冒险, 独立, 角色扮演, 模拟</span></div>
+        <div class="info-row"><span class="info-label">开发商</span><span class="info-val">Pugstorm</span></div>
+        <div class="info-row"><span class="info-label">发行商</span><span class="info-val">Fireshine Games, bilibili</span></div>
+        <div class="info-row"><span class="info-label">发行日期</span><span class="info-val">2024 年 8 月 27 日</span></div>
+        <div class="info-row"><span class="info-label">支持平台</span><span class="info-val">Windows / Linux</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>数据来源：Steam · 抓取时间：2026-02-28</footer>
+
+<div class="lightbox" id="lb" onclick="closeLb()">
+  <span class="lightbox-close">✕</span>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+function openImg(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('active');}
+function closeLb(){document.getElementById('lb').classList.remove('active');}
+</script>
+</body>
+</html>
